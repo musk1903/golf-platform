@@ -39,13 +39,15 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button 
+<motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#A3E635] to-emerald-600 text-black font-black text-lg px-12 py-6 rounded-3xl shadow-2xl hover:shadow-emerald/50 hover:-translate-y-1 transition-all duration-300 min-w-[200px]"
+              onClick={() => window.location.href = '/book'}
+              className="bg-gradient-to-r from-[#A3E635] to-emerald-600 text-black font-black text-lg px-12 py-6 rounded-3xl shadow-2xl hover:shadow-emerald/50 hover:-translate-y-1 transition-all duration-300 min-w-[200px] cursor-pointer"
             >
               ⛳ Book Tee Time
             </motion.button>
+
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
