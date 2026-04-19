@@ -1,6 +1,9 @@
 "use client"
 
+export const dynamic = 'force-dynamic'
+
 import AdminLayout from "./layout"
+
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'

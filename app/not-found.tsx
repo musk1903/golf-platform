@@ -1,6 +1,9 @@
+export const dynamic = 'force-dynamic'
+
 import { notFound } from 'next/navigation'
 
 export default function NotFound() {
+
   return (
     <div className="flex flex-col items-center justify-center min-h-[400px] p-8 text-center">
       <h2 className="text-4xl font-bold text-gray-900 mb-4">404 - Page Not Found</h2>
