@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: linear-gradient(135deg, #0F2E1D 0%, #1A4B2E 50%, #0F2E1D 100%);
+  --background-solid: #0F2E1D;
+  --card: rgba(255,255,255,0.1);
+  --card-border: rgba(255,255,255,0.2);
+  --foreground: #FFFFFF;
+  --primary: #A3E635;
+  --accent: #FBBF24;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Fix text visibility on ALL backgrounds */
+.text-gray-900, .text-gray-700, .text-gray-500, .text-gray-600, .text-gray-800,
+.text-blue-600, .text-green-600, .text-yellow-600, .text-red-600, .text-red-800, .text-green-800,
+.font-medium, .font-bold, input[type="date"], input[type="time"] {
+  color: rgb(17 24 39 / 1) !important;
+}
+input[type="date"]:invalid, input[type="time"]:invalid {
+  color: rgb(107 114 128 / 0.5) !important;
+}
+
+.dark .text-gray-900, .dark .text-gray-700, .dark .text-gray-500, .dark .text-gray-600, .dark .text-gray-800,
+.dark .text-blue-600, .dark .text-green-600, .dark .text-yellow-600, .dark .text-red-600, .dark .text-red-800, .dark .text-green-800,
+.dark .font-medium, .dark .font-bold {
+  color: rgb(255 255 255 / 0.95) !important;
+}
+
+.bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.border {
+  border-color: #e5e7eb !important;
+}
+
